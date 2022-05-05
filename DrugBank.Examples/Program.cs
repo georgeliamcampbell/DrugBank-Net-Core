@@ -19,11 +19,11 @@ namespace DrugBank.Examples
             }
             
             var x = from drug in drugbank.Drugs
-                    where drug.Sequences.Count > 0
+                    where drug.ExternalLinks.Count > 0
                     orderby drug.Name
                     select drug;
 
-            Console.WriteLine("Hello World!");
+            Console.Read();
         }
     }
 }

@@ -159,6 +159,40 @@ namespace DrugBank
         public virtual List<DrugSequence> Sequences { get; set; }
 
         // Calculated Properties
+        [XmlArray("calculated-properties")]
+        [XmlArrayItem("property")]
+        public virtual List<CalculatedProperty> CalculatedProperties { get; set; }
+
+        // Experimental Properties
+        [XmlArray("experimental-properties")]
+        [XmlArrayItem("property")]
+        public virtual List<ExperimentalProperty> ExperimentalProperties { get; set; }
+
+        //External Identifiers
+        [XmlArray("external-identifiers")]
+        [XmlArrayItem("external-identifier")]
+        public virtual List<ExternalIdentifier> ExternalIdentifiers { get; set; }
+
+        //External Links
+        [XmlArray("external-links")]
+        [XmlArrayItem("external-link")]
+        public virtual List<ExternalLink> ExternalLinks { get; set; }
+
+        //TODO: Pathways
+
+        //TODO: Reactions
+
+        //TODO: SNP Effects
+
+        //TODO: SNP Adverse Drug Reactions
+
+        //TODO: Targets
+
+        //TODO: Enzymes
+
+        //TODO: Carriers
+
+        //TODO: Transporters
 
         [XmlAttribute("type")]
         public virtual DrugType Type { get; set; }
